@@ -1,58 +1,36 @@
+AdPlusScan - Android BLE Scanner & Advertiser
+This app is built with Java and lets an Android phone act as both a BLE Scanner (finding devices) and a BLE Advertiser (broadcasting its presence) at the same time.
 
-# BLE Advertising & Scanning – Android Implementation
+[!NOTE] Project Status: This is a core part of a larger, more complex system I am currently developing.
 
-This Android application, developed in **Java**, provides a robust implementation of **Bluetooth Low Energy (BLE)** communication. It bridges the gap between high-level UI actions and low-level hardware interaction, demonstrating a deep understanding of the BLE protocol and Android system architecture.
+🚀 Key Features
+BLE Advertising (Peripheral Mode): The phone sends out signals with a unique ID (UUID) and custom manufacturer data that I defined.
 
-> [!NOTE]
-> **Project Status:** This module is a core functional subsystem of the **"Lost-Found"** project, currently under active development.
+BLE Scanning (Central Mode): The app actively looks for nearby devices, showing their ID (UUID) and how strong the signal is (RSSI).
 
----
+Smart Permissions: I built a system to handle Android’s tricky permissions (like Location and Bluetooth) in real-time so the app runs smoothly without crashing.The application performs real-time permission checks and automatically prompts the user for the required authorizations.
 
-## 🛠 Technical Highlights
 
-### BLE Architecture & Hardware Interaction
-The project manages the dual-role lifecycle of a BLE device:
-* **Peripheral Role (Advertising):** Constructs and broadcasts BLE packets containing **Service UUIDs** and **Manufacturer-specific data**.
-* **Central Role (Scanning):** Actively discovers nearby peripherals, parsing scan results to extract **RSSI** (signal strength), device names, and advertised payloads.
-* **Hardware Awareness:** Implements defensive checks for Bluetooth availability and **Multiple Advertisement** support to ensure stability across different hardware capabilities.
+🛠 Tech Stack
+Language: Java.
 
-### Android System Integration
-* **Dynamic Permission Engine:** A comprehensive flow for handling **Runtime Permissions** required for BLE. The system detects and reacts to missing, denied, or permanently denied states to maintain a smooth user experience.
-* **Lifecycle-Conscious Logic:** Uses **Handlers** and **Callbacks** (`ScanCallback`, `AdvertiseCallback`) to manage time-limited scanning windows, preventing unnecessary battery drain and memory leaks.
+Android SDK: Bluetooth LE APIs (BluetoothLeScanner, BluetoothLeAdvertiser).
 
----
+UI: Material Design with Edge-to-Edge support.
 
-## 🚀 Key Features
+Version Control: Git & GitHub.
 
-* **BLE Advertising:**
-    * Customizable Service UUIDs.
-    * Injection of Manufacturer-specific payloads.
-    * Configurable broadcasting parameters.
-* **BLE Scanning:**
-    * Real-time extraction of RSSI and device metadata.
-    * Packet parsing for Service UUIDs and raw data.
-* **Robust Error Handling:** Extensive logging and validation for every step of the BLE workflow.
+While debugging was primarily conducted on a legacy device—where location access encompasses BLE functionality—the codebase is fully equipped to handle the granular permissions required by modern Android versions
+ן
 
----
+📋 How to Run the Project
+Clone the repo: git clone https://github.com/Adi052447/AdPlusScan.git
 
-## 💻 Technology Stack
+Open in Android Studio.
 
-| Component | Technology |
-| :--- | :--- |
-| **Language** | Java |
-| **Platform** | Android SDK |
-| **Communication** | Bluetooth Low Energy (BLE) |
-| **Database** | Integration with Firebase/Firestore (In Progress) |
+Use a real phone: BLE doesn't work well on emulators. Make sure your Bluetooth and Location are turned on.
 
----
+Run the app: Click "Scan" to find devices or "Advertise" to let others find you.
 
-## 📋 Requirements & Setup
-
-1. **Hardware:** A physical Android device with BLE support (emulators are not supported for BLE features).
-2. **Configuration:** Bluetooth must be enabled on the device.
-3. **Permissions:** The app will request Location/Bluetooth permissions at runtime to access hardware radio.
-
----
-
-## 🎯 Purpose
-This project serves as a technical showcase of practical Android development, focusing on system-level APIs, asynchronous programming, and real-world hardware constraints. It reflects a solid foundation in building non-trivial mobile features that interact directly with device sensors.
+Summary
+This project shows my ability to work directly with phone hardware, handle complex Android permissions, and write clean, asynchronous code.
