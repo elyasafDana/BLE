@@ -5,7 +5,7 @@ This app is built with Java and lets an Android phone act as both a BLE Scanner 
 > [!NOTE]
 > **Project Status:** This is a core part of a larger, more complex system I am currently developing.
 
----
+
 
 ## 🚀 Key Features
 
@@ -13,7 +13,6 @@ This app is built with Java and lets an Android phone act as both a BLE Scanner 
 * **BLE Scanning (Central Mode):** The app actively looks for nearby devices, showing their ID (UUID) and how strong the signal is (RSSI).
 * **Smart Permissions:** I built a system to handle Android’s tricky permissions (like Location and Bluetooth) in real-time so the app runs smoothly without crashing. The application performs real-time permission checks and automatically prompts the user for the required authorizations.
 
----
 
 ## 🛠 Tech Stack
 
@@ -24,7 +23,6 @@ This app is built with Java and lets an Android phone act as both a BLE Scanner 
 
 While debugging was primarily conducted on a legacy device—where location access encompasses BLE functionality—the codebase is fully equipped to handle the granular permissions required by modern Android versions.
 
----
 
 ## 📋 How to Run the Project
 
@@ -33,7 +31,6 @@ While debugging was primarily conducted on a legacy device—where location acce
 3. **Use a real phone:** BLE doesn't work well on emulators. Make sure your Bluetooth and Location are turned on.
 4. **Run the app:** Click "Scan" to find devices or "Advertise" to let others find you.
 
----
 
 ## Summary
 This project shows my ability to work directly with phone hardware, handle complex Android permissions, and write clean, asynchronous code.
